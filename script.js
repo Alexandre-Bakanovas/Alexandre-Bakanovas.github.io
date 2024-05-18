@@ -1,4 +1,4 @@
-// Código JavaScript atualizado
+// Código JavaScript para mudança das páginas na mesma tela.
 function mostrarConteudo(conteudo) {
     // Oculta a página inicial
     document.getElementById('inicio').style.display = 'none';
@@ -26,7 +26,7 @@ function mostrarConteudo(conteudo) {
     });
 }
 
-// Adiciona evento de clique aos cabeçalhos dos tópicos para alternar a visibilidade do conteúdo
+// Adiciona evento de clique aos cabeçalhos dos tópicos na aba de Porftolio para alternar a visibilidade do conteúdo
 var topics = document.querySelectorAll('.topic');
 topics.forEach(function(topic) {
     var header = topic.querySelector('.topic-header');

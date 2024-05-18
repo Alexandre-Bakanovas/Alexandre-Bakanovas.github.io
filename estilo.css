@@ -1,10 +1,11 @@
+/* aplicação de estilo a todo o body para personalizar cores do site, fonte e espaçamento. */
 body {
-margin: 0; /* Remove a margem padrão do corpo */
-background-color: #f0f0f0; /* Define a cor de fundo */
-background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o corpo */
-background-position: center; /* Centraliza a imagem de fundo */
-font-family: Arial, sans-serif; /* Define uma fonte padrão */
-color: #333; /* Define a cor do texto */ 
+margin: 0; 
+background-color: #f0f0f0; 
+background-size: cover; 
+background-position: center; 
+font-family: Arial, sans-serif; 
+color: #333; 
 }
 
 /* Estilos para os diferentes layouts */
@@ -12,46 +13,82 @@ color: #333; /* Define a cor do texto */
     display: none;
 }
 
+
+/* Formatação CSS para os links. */
 .links-container {
-    display: flex; /* Utiliza flexbox */
-    justify-content: space-between; /* Distribui os links uniformemente */
-    padding: 0 10px; /* Adiciona um espaço nas laterais do container */
-    background-color: gray; /* Define uma cor de fundo para a barra de links */
+    display: flex; 
+    justify-content: space-between; 
+    padding: 0 10px; 
+    background-color: gray; 
 }
 
-
 .links-container a {
-    color: black; /* Define a cor do texto dos links */
+    color: black; 
 }
 
 .links-container a:hover {
-    background-color: #555; /* Altera a cor de fundo dos links quando passa o mouse sobre eles */
+    background-color: #555; 
 }
 
+/* Class para atribiur às divs para que fiquem à direita, com algumas estilizações de cores e espaçamentos. */
 .container {
     display: flex;
-    flex-direction: row; /* Inverte a direção do fluxo */
-    max-width: auto; /* Define a largura máxima do conteúdo */
-    margin: 0 auto; /* Centraliza o conteúdo na página */
-    padding: 20px; /* Adiciona um espaçamento interno */
-    background-color: lightgray; /* Define uma cor de fundo para o conteúdo */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    flex-direction: row; 
+    max-width: auto; 
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: lightgray; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
+/* Class para fazer com que a div dentro do link de Portfólio fique disponível para expansão, na forma de colunas (ou seja, uma abaixo da outra.), juntamente com as class de topic para formatações e estilizações necessárias. */
 .container_topic {
     display: flex;
-    flex-direction: column; /* Inverte a direção do fluxo */
-    width: 1800px; /* Define a largura máxima do conteúdo */
-    margin: 0 auto; /* Centraliza o conteúdo na página */
-    padding: 20px; /* Adiciona um espaçamento interno */
-    background-color: lightgray; /* Define uma cor de fundo para o conteúdo */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    flex-direction: column; 
+    width: 1800px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    background-color: lightgray; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+.topic {
+    background-color: rgba(139, 207, 139, 0.788);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.topic-header {
+    padding: 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    background-color: rgba(114, 224, 114, 0.788);
+}
+
+.topic-header:hover {
+    background-color: rgba(4, 241, 4, 0.788);
+}
+
+.topic-content {
+    padding: 15px;
+    display: none; 
+}
+
+.topic img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+
+/* Formatações e classes para configurações do formulátio. */
 form {
     width: 90%;
-    max-width: auto; /* Define uma largura máxima para o formulário */
-    background-color: lightgray; /* Define uma cor de fundo para o conteúdo */
+    max-width: auto; 
+    background-color: lightgray; 
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -97,84 +134,58 @@ button[type="submit"]:hover {
 /* Adiciona regras de estilo de mídia para ajustar o layout em tamanhos de tela menores */
 @media (max-width: 768px) {
     form {
-        width: 100%; /* Define a largura do formulário como 100% em telas menores */
+        width: 100%;
     }
 }
 
-.topic {
-    background-color: rgba(139, 207, 139, 0.788);
-    border-radius: 5px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
-.topic-header {
-    padding: 15px;
-    cursor: pointer;
-    border-bottom: 1px solid #ddd;
-    background-color: rgba(114, 224, 114, 0.788);
-}
 
-.topic-header:hover {
-    background-color: rgba(4, 241, 4, 0.788);
-}
-
-.topic-content {
-    padding: 15px;
-    display: none; /* Inicia oculto */
-}
-
-.topic img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px auto;
-    border-radius: 5px;
-}
-
-/* Div para a imagem (opcional) */
+/* Classe para formatação da div onde está a imagem e formatação da imagem dentro da div */
 .image-div {
-    width: 20%; /* Define a largura da div da imagem */
-    background-color: lightyellow; /* Define uma cor de fundo para as seções de imagem */
-    padding: 20px; /* Adiciona um espaçamento interno */
-    border-radius: 5px; /* Adiciona bordas arredondadas */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    width: 20%; 
+    background-color: lightyellow; 
+    padding: 20px; 
+    border-radius: 5px; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
 }
 .image-div img {
-    max-width: 100%; /* Define a largura máxima da imagem */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove espaço extra abaixo da imagem */
-    margin: 0 auto; /* Centraliza a imagem na div */
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
 }
 
 .image-div p{
     margin: 0%;
 }
-/* Div para o texto */
+
+
+/* Div para o texto que ficará a direita.*/
 .text-div {
-    flex-grow: 1; /* A div se expande para preencher o espaço restante */
-    text-align: justify; /* Alinha o texto justificado */
-    padding: 20px; /* Adiciona um espaçamento interno */
-    border-radius: 5px; /* Adiciona bordas arredondadas */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    flex-grow: 1; 
+    text-align: justify;
+    padding: 20px; 
+    border-radius: 5px; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
 }
 
 .text-div p {
     margin: 0%;
 }
+
+
 /* Estilo para os links */
 a {
-    padding: 15px; /* Adiciona um preenchimento interno */
-    text-decoration: none; /* Remove a decoração de sublinhado */
-    color: black; /* Cor do texto */
-    background-color: gray; /* Cor de fundo */
-    border-radius: 5px; /* Borda arredondada */
+    padding: 15px; 
+    text-decoration: none; 
+    color: black; 
+    background-color: gray; 
+    border-radius: 5px; 
     border: 2px solid transparent;
 }
-        /* Estilo para os links quando passa o mouse sobre eles */
-    a:hover {
-    background-color: gray; /* Altera a cor de fundo quando o mouse passa sobre o link */
+/* Estilo para os links quando passa o mouse sobre eles */
+a:hover {
+    background-color: gray; 
     border-color: black;
 }
 
